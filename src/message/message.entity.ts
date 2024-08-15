@@ -6,17 +6,23 @@ import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Message {
     @PrimaryGeneratedColumn()
-    id:number;
+    id: number;
 
     @Column()
     message: string;
 
-    @Column({default: false})
+    @Column({ default: false })
     isClosed: boolean;
+
+    @Column({ default: "" })
+    response: string;
 
     @ManyToOne(() => User, (user) => user.messages)
     user: User;
-  
+
+    @ManyToOne(() => User, (user) => user.messages, { nullable: true })
+    operator: User;
+
     @ManyToOne(() => Room, (room) => room.messages)
     room: Room;
 

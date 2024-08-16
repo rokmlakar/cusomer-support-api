@@ -12,16 +12,25 @@ Built with NestJS
 # Setup
 1. Clone repo
 git clone https://github.com/your-username/customer-support-api.git
+```
 cd customer-support-api
+```
 
 2. Intall dependecies
+```
 npm install
+```
 
 3. Run the docker postgres DB
-docker-compose up -d
+```
+docker-compose up -d 
+```
+DB gets populted on start with data from the seed <br/>
 
 4. Run the application
+```
 npm run start:dev
+```
 
 5. Postman (use provided postman collection) or any other tool for API testing
 

@@ -1,11 +1,15 @@
-The Customer Support API is a backend service built with NestJS
+# The Customer Support API 
 
-Prerequesites 
-Docker & Docker compose - for PostgreSQL database
-Node.js
-Git
-Postman (optional)
+Built with NestJS
 
+# Prerequesites 
+
+-Docker & Docker compose - for PostgreSQL database <br/>
+-Node.js <br/>
+-Git <br/> 
+-Postman (optional)
+
+# Setup
 1. Clone repo
 git clone https://github.com/your-username/customer-support-api.git
 cd customer-support-api
@@ -21,33 +25,39 @@ npm run start:dev
 
 5. Postman (use provided postman collection) or any other tool for API testing
 
+# REST Endpoints
+
 base url: http://localhost:3000
 
 Endpoints:
 
 Login:
-Endpoint: POST /auth/login
-Request Body example:
+
+Endpoint: POST /auth/login <br/>
+Request Body example: <br/>
+```JSON
 {
   "username": "Jure",
   "password": "pass"
 }
+```
 
-getUserById
+getUserById <br/>
 Endpoint: GET /user/:id
 
-getAllUsers
+getAllUsers <br/>
 Endpoint: GET /user
 
-getAllRooms
-/room
+getAllRooms <br/>
+/room <br/>
 Endpoint: GET /room
 
-createMessage
-Endpoint: POST /message
-Request body example:
+createMessage <br/>
+Endpoint: POST /message <br/>
+Request body example: 
+```JSON
 {
-    "message" : "messageTest",
+  "message" : "messageTest",
     "room" : {
         "id" : 2
     },
@@ -55,31 +65,36 @@ Request body example:
         "id" : 1
     }
 }
+```
 Only users with role = "user" can create messages
 
-getOpenMessages
-Endpoint: GET /message/open
+getOpenMessages  <br/>
+Endpoint: GET /message/open <br/>
 Only users with role = "operator" can view messages
 
-getClosedMessages
-Endpoint: GET /message/closed
+getClosedMessages <br/>
+Endpoint: GET /message/closed <br/>
 Only users with role = "operator" can view messages
 
-getMessageByid
-Endpoint: GET /message/:id
+getMessageByid <br/>
+Endpoint: GET /message/:id <br/>
 Only users with role = "operator" can view messages
 
-messageResponse
-Endpoint: POST /message/:id/response
+messageResponse <br/>
+Endpoint: POST /message/:id/response <br/>
 Request body example:
+```JSON
 {
+  {
     "response": "responseTest",
     "operatorId": 7
 }
+}
+```
 Only users with role = "operator" can respond to messages
 
-getMessageResponseByUserId
-Endpoint: GET /message/user/:id
+getMessageResponseByUserId <br/>
+Endpoint: GET /message/user/:id <br/>
 Only users with role = "user" can view messge responses
 
 

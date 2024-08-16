@@ -27,6 +27,7 @@ export class BasicAuthGuard implements CanActivate {
     const user = await this.userService.findByUsername(username);
 
     if (user && await bcrypt.compare(password, user.password)) {
+      (request as any).user = user;
       return true; 
     } else {
       throw new UnauthorizedException('Invalid credentials!');

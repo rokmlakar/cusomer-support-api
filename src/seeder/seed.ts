@@ -34,15 +34,36 @@ export class SeederService implements OnModuleInit {
         const hashedPassword = await bcrypt.hash("pass", saltRounds);
         const users = [
             {
-                "username": "operator",
+                "username": "Jure",
                 "password": hashedPassword,
                 "role": "operator"
             },
             {
-                "username": "user",
+                "username": "Miha",
+                "password": hashedPassword,
+                "role": "operator"
+            },
+            {
+                "username": "Luigi",
+                "password": hashedPassword,
+                "role": "operator"
+            },
+            {
+                "username": "Mario",
+                "password": hashedPassword,
+                "role": "user"
+            },
+            {
+                "username": "Roberto",
+                "password": hashedPassword,
+                "role": "user"
+            },
+            {
+                "username": "Vili",
                 "password": hashedPassword,
                 "role": "user"
             }
+
         ];
 
         for (const user of users) {

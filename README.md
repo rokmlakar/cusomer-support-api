@@ -12,7 +12,7 @@ Built with NestJS
 # Setup
 1. Clone repo
 ```
-git clone https://github.com/your-username/customer-support-api.git
+git clone https://github.com/rokmlakar/customer-support-api.git
 cd customer-support-api
 ```
 

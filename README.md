@@ -69,6 +69,11 @@ Only users with role = "operator" can view messages
 
 messageResponse
 Endpoint: POST /message/:id/respone
+Request body example:
+{
+    "response": "responseTest",
+    "operatorId": 7
+}
 Only users with role = "operator" can respond to messages
 
 getMessageResponeByUserId

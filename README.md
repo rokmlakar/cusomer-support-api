@@ -1,7 +1,7 @@
 The Customer Support API is a backend service built with NestJS
 
 Prerequesites 
-Docker & Docker compose
+Docker & Docker compose - for PostgreSQL database
 Node.js
 
 1. Clone repo
@@ -15,9 +15,9 @@ npm install
 docker-compose up -d
 
 4. Run the application
-npm run start
+npm run start:dev
 
-5. Postman (included import for endpoints) or any other tool for API testing
+5. Postman (use provided postman collection) or any other tool for API testing
 
 base url: http://localhost:3000
 
@@ -68,7 +68,7 @@ Endpoint: GET /message/:id
 Only users with role = "operator" can view messages
 
 messageResponse
-Endpoint: POST /message/:id/respone
+Endpoint: POST /message/:id/response
 Request body example:
 {
     "response": "responseTest",
@@ -76,7 +76,7 @@ Request body example:
 }
 Only users with role = "operator" can respond to messages
 
-getMessageResponeByUserId
+getMessageResponseByUserId
 Endpoint: GET /message/user/:id
 Only users with role = "user" can view messge responses
 

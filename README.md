@@ -3,6 +3,8 @@ The Customer Support API is a backend service built with NestJS
 Prerequesites 
 Docker & Docker compose - for PostgreSQL database
 Node.js
+Git
+Postman (optional)
 
 1. Clone repo
 git clone https://github.com/your-username/customer-support-api.git

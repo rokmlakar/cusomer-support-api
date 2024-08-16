@@ -15,7 +15,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/user/3",
+							"raw": "http://localhost:3000/user/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -23,7 +23,7 @@
 							"port": "3000",
 							"path": [
 								"user",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -35,7 +35,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/user/3",
+							"raw": "http://localhost:3000/user/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -43,7 +43,7 @@
 							"port": "3000",
 							"path": [
 								"user",
-								"3"
+								""
 							]
 						}
 					},
@@ -86,7 +86,7 @@
 							"basic": [
 								{
 									"key": "username",
-									"value": "user",
+									"value": "Mario",
 									"type": "string"
 								},
 								{
@@ -100,7 +100,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"message\" : \"messageTest\",\r\n    \"room\" : {\r\n        \"id\" : 2\r\n    },\r\n    \"user\" : {\r\n        \"id\" : 3\r\n    }\r\n}",
+							"raw": "{\r\n    \"message\" : \"messageTest\",\r\n    \"room\" : {\r\n        \"id\" : 2\r\n    },\r\n    \"user\" : {\r\n        \"id\" : 6\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -129,7 +129,7 @@
 							"basic": [
 								{
 									"key": "username",
-									"value": "operator",
+									"value": "Luigi",
 									"type": "string"
 								},
 								{
@@ -164,7 +164,7 @@
 							"basic": [
 								{
 									"key": "username",
-									"value": "operator",
+									"value": "Luigi",
 									"type": "string"
 								},
 								{
@@ -199,7 +199,7 @@
 							"basic": [
 								{
 									"key": "username",
-									"value": "user",
+									"value": "Luigi",
 									"type": "string"
 								},
 								{
@@ -212,7 +212,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/message/11",
+							"raw": "http://localhost:3000/message/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -220,7 +220,43 @@
 							"port": "3000",
 							"path": [
 								"message",
-								"11"
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMessageResponseByUserId",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "Mario",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/message/user/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"message",
+								"user",
+								"6"
 							]
 						}
 					},
@@ -234,7 +270,7 @@
 							"basic": [
 								{
 									"key": "username",
-									"value": "operator",
+									"value": "Luigi",
 									"type": "string"
 								},
 								{
@@ -248,7 +284,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"response\": \"responseTest\",\r\n    \"operatorId\": 3\r\n}",
+							"raw": "{\r\n    \"response\": \"responseTest\",\r\n    \"operatorId\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -256,7 +292,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/message/16/response/",
+							"raw": "http://localhost:3000/message/1/response/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -264,7 +300,7 @@
 							"port": "3000",
 							"path": [
 								"message",
-								"16",
+								"1",
 								"response",
 								""
 							]
@@ -281,7 +317,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"user\",\r\n    \"password\" : \"pass\"\r\n}",
+					"raw": "{\r\n    \"username\" : \"Jure\",\r\n    \"password\" : \"pass\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
